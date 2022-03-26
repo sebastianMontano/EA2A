@@ -8,10 +8,11 @@
   </p>
   <div class="row">
     <div class="col-6">
-      <form method="post">
+      <form [formGroup]="contactusForm" method="post">
         <div class="form-group">
           <input
             type="text"
+            formControlName="nombre"
             placeholder="Ingrese nombre"
             class="form-control"
           />
@@ -19,6 +20,7 @@
         <div class="form-group">
           <input
             type="text"
+            formControlName="apellido"
             placeholder="Ingrese apellido"
             class="form-control"
           />
@@ -26,21 +28,26 @@
         <div class="form-group">
           <input
             type="email"
+            formControlName="correo"
             placeholder="Ingrese correo"
             class="form-control"
           />
         </div>
         <div class="form-group">
           <textarea
+            formControlName="mensaje"
             placeholder="Ingrese mensaje"
             rows="3"
             class="form-control"
           ></textarea>
         </div>
         <div class="form-group">
-          <button class="btn-primary">Enviar Datos</button>
+          <button (click)="_onSubmit()" class="btn-primary">Enviar Datos</button>
         </div>
       </form>
+      <p>
+          Datos del formulario: {{ contactusForm.value | json }}
+      </p>
     </div>
     <div class="col-6">Aquí va el mapa</div>
   </div>

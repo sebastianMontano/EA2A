@@ -19,6 +19,10 @@ export class ContactusComponent implements OnInit {
     mensaje:['']
   })
 
+  _onSubmit(){
+    console.log(this.contactusForm.value);
+  }
+
   ngOnInit(): void {
   }
 
