@@ -9,21 +9,23 @@
   <div class="row">
     <div class="col-6">
       <form [formGroup]="contactusForm" method="post">
-        <div class="form-group">
-          <input
-            type="text"
-            formControlName="nombre"
-            placeholder="Ingrese nombre"
-            class="form-control"
-          />
-        </div>
-        <div class="form-group">
-          <input
-            type="text"
-            formControlName="apellido"
-            placeholder="Ingrese apellido"
-            class="form-control"
-          />
+        <div formGroupName="persona">
+          <div class="form-group">
+            <input
+              type="text"
+              formControlName="nombre"
+              placeholder="Ingrese nombre"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              formControlName="apellido"
+              placeholder="Ingrese apellido"
+              class="form-control"
+            />
+          </div>
         </div>
         <div class="form-group">
           <input
@@ -42,13 +44,25 @@
           ></textarea>
         </div>
         <div class="form-group">
-          <button (click)="_onSubmit()" class="btn-primary">Enviar Datos</button>
+          <button (click)="_onSubmit()" class="btn-primary">
+            Enviar Datos
+          </button>
         </div>
       </form>
-      <p>
-          Datos del formulario: {{ contactusForm.value | json }}
-      </p>
+      <p>Datos del formulario: {{ contactusForm.value | json }}</p>
+      <p>Validacion Formulario: {{ contactusForm.valid }}</p>
     </div>
-    <div class="col-6">Aquí va el mapa</div>
+    <div class="col-6">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.118260302825!2d-76.96509068401083!3d-12.1040557462673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c70ab77498c1%3A0xcce9f50642e7c684!2sUPC%20Campus%20Monterrico!5e0!3m2!1sen!2spe!4v1648261397996!5m2!1sen!2spe"
+        width="600"
+        height="300"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe
+      >/div>
+    </div>
   </div>
 </div>

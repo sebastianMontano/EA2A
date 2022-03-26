@@ -8,6 +8,10 @@ import { ContactusComponent } from './pages/contactus/contactus.component';
 import { AppRoutingModule } from './app-routing.module';
 import { TeamComponent } from './pages/team/team.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProjectNewComponent } from './access/project/project-new/project-new.component';
+import { ProjectListComponent } from './access/project/project-list/project-list.component';
+import { ApartmentNewComponent } from './access/project/apartment-new/apartment-new.component';
+import { ApartmentListComponent } from './access/project/apartment-list/apartment-list.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     AboutusComponent,
     ContactusComponent,
-    TeamComponent
+    TeamComponent,
+    ProjectNewComponent,
+    ProjectListComponent,
+    ApartmentNewComponent,
+    ApartmentListComponent
   ],
   imports: [
     BrowserModule,
