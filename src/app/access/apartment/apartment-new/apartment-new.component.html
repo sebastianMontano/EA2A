@@ -1,1 +1,76 @@
-<p>apartment-new works!</p>
+<div
+  class="login-dark"
+  style="background-image: url('assets/img/backgrounds/form-bg.jpg')"
+>
+  <form
+    [formGroup]="newapartmentForm"
+    method="post"
+    style="background-color: rgba(255, 255, 255, 0.9)"
+  >
+    <h2
+      class="text-center"
+      style="color: #ffa555; font-size: 26px; margin-bottom: 20px"
+    >
+      Registrar<br />Departamento
+    </h2>
+    <div class="form-group">
+      <select class="form-control form-control-sm" style="color: rgb(0, 0, 0)" formControlName="tipo">
+        <option value="12" selected="">Tipo</option>
+        <option value="14">Duplex</option>
+        <option value="14">Estudio</option>
+        <option value="">Flat</option>
+        <option value="13">Loft</option>
+        <option value="14">Mixto</option>
+        <option value="">Penthouse</option>
+        <option value="14">Tradicional</option>
+        <option value="14">Mixto</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <input
+        class="form-control"
+        type="text"
+        formControlName="nombre"
+        placeholder="Nombre"
+        autocomplete="off"
+        style="color: rgb(0, 0, 0)"
+      /><small class="form-text text-danger d-none"
+        >Please enter a correct email address.</small
+      >
+    </div>
+    <div class="form-group">
+      <input
+        class="form-control"
+        type="number"
+        formControlName="area"
+        placeholder="Área en m²"
+        style="color: rgb(0, 0, 0)"
+      /><small class="form-text text-danger d-none"
+        >Please enter a correct email address.</small
+      >
+    </div>
+    <div class="form-group">
+      <input
+        class="form-control"
+        type="number"
+        formControlName="piso"
+        placeholder="Piso"
+        style="color: rgb(0, 0, 0)"
+      /><small class="form-text text-danger d-none"
+        >Please enter a correct email address.</small
+      >
+    </div>
+    <div class="form-group text-center">
+      <button
+        (click)="_onSubmit()"
+        class="btn btn-primary"
+        type="submit"
+        style="background-color: #ffa555; font-weight: normal"
+      >
+        Registrar
+      </button>
+    </div>
+  </form>
+  <p>Datos del formulario: {{ newapartmentForm.value | json }}</p>
+  <p>Validacion Formulario: {{ newapartmentForm.valid }}</p>
+</div>

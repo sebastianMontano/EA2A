@@ -25,7 +25,7 @@ export class ContactusComponent implements OnInit {
     if(this.contactusForm.valid){
       console.log(this.contactusForm.value);
     }else
-    console.log("no es valido")
+    alert("no es valido")
   }
 
   ngOnInit(): void {

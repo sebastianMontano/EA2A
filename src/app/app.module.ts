@@ -10,8 +10,8 @@ import { TeamComponent } from './pages/team/team.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProjectNewComponent } from './access/project/project-new/project-new.component';
 import { ProjectListComponent } from './access/project/project-list/project-list.component';
-import { ApartmentNewComponent } from './access/project/apartment-new/apartment-new.component';
-import { ApartmentListComponent } from './access/project/apartment-list/apartment-list.component';
+import { ApartmentNewComponent } from './access/apartment/apartment-new/apartment-new.component';
+import { ApartmentListComponent } from './access/apartment/apartment-list/apartment-list.component';
 
 @NgModule({
   declarations: [
